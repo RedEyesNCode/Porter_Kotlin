@@ -6,4 +6,17 @@
     <string name="change">Change</string>
     <string name="one_time_password_otp_has_been_sent_to_this_number">One time password(OTP) has been sent to this number.</string>
     <string name="verify">Verify</string>
+    <string name="no_orders">Looks like you don\'t have any \n Truck or 2 Wheelers orders</string>
+    <string name="book_now">Book Now</string>
+    <string name="view_details">View details</string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="if_you_love_the_work_we_are_doing_n_please_spread_the_word">If you love the work we are doing \n Please spread the word</string>
+    <string name="for_any_queries_or_help">For any queries or help</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="app_version_v5_57_0">App version v5.57.0</string>
+    <string name="legal">Legal</string>
+    <string name="porter_credits">Porter credits</string>
+    <string name="payment">Payment</string>
+    <string name="balance_0">Balance : 0</string>
+    <string name="add_money">Add Money</string>
 </resources>

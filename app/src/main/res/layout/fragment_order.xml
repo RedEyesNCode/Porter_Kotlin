@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ui.fragment.OrderFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvnoOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_orders"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_12sdp" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/_95sdp"
+        android:id="@+id/btnLogin"
+        android:text="@string/book_now"
+        android:layout_below="@id/tvnoOrders"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:background="@drawable/background_rounded_blue"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</RelativeLayout>
