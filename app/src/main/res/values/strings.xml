@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">porter</string>
+    <string name="appawheels_com">AppaWheels.com</string>
+    <string name="with_a_valid_number_you_can_access_our_deliveries_and_our_other_services">With a valid number, You can access our deliveries and our other services.</string>
+    <string name="welcome">Welcome</string>
+    <string name="change">Change</string>
+    <string name="one_time_password_otp_has_been_sent_to_this_number">One time password(OTP) has been sent to this number.</string>
+    <string name="verify">Verify</string>
+</resources>
