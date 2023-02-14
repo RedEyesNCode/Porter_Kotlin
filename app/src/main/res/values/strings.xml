@@ -23,4 +23,6 @@
     <string name="add_money">Add Money</string>
     <string name="are_you_sure">Are you sure ?</string>
     <string name="enter_amount">Enter Amount</string>
+    <string name="GOOGLE_API_KEY">AIzaSyD7PGsX_T85cAxk4z61oOrpGsAcrcdGo3o</string>
+
 </resources>
