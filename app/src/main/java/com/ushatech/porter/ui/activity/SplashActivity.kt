@@ -1,4 +1,4 @@
-package com.ushatech.porter
+package com.ushatech.porter.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         initClicks()
         Handler().postDelayed(Runnable {
-            startActivity(Intent(this@SplashActivity,LoginActivity::class.java))
+            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
         },1500)
 
 

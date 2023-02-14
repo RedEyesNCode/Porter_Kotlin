@@ -1,9 +1,9 @@
-package com.ushatech.porter
+package com.ushatech.porter.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ushatech.porter.databinding.ActivityUserDetailsBinding
+import com.ushatech.porter.presentation.BaseActivity
 
 class UserDetailsActivity : BaseActivity() {
 
@@ -20,7 +20,7 @@ class UserDetailsActivity : BaseActivity() {
 
     private fun initClicks() {
         binding.btnRegister.setOnClickListener {
-            startActivity(Intent(this@UserDetailsActivity,DashboardActivity::class.java))
+            startActivity(Intent(this@UserDetailsActivity, DashboardActivity::class.java))
 
         }
     }

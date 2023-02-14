@@ -12,19 +12,19 @@
         android:theme="@style/Theme.Porter"
         tools:targetApi="31">
         <activity
-            android:name=".DashboardActivity"
+            android:name=".ui.activity.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".UserDetailsActivity"
+            android:name=".ui.activity.UserDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".VerifyOtpActivity"
+            android:name=".ui.activity.VerifyOtpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,9 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>

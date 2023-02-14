@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    tools:context=".ui.activity.DashboardActivity">
+    <fragment
+        android:id="@+id/activity_main_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationbar"
+        android:layout_centerInParent="true"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
-</LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:saveEnabled="false"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#205BBF"
+        app:labelVisibilityMode="labeled"
+        app:itemRippleColor="#205BBF"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

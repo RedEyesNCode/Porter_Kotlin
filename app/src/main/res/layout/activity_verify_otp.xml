@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".VerifyOtpActivity">
+    tools:context=".ui.activity.VerifyOtpActivity">
     <TextView
         android:layout_width="match_parent"
         android:text="@string/appawheels_com"

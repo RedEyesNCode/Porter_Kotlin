@@ -1,4 +1,4 @@
-package com.ushatech.porter
+package com.ushatech.porter.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +19,7 @@ class VerifyOtpActivity : AppCompatActivity() {
 
     private fun initClicks() {
         binding.btnVerifyOtp.setOnClickListener {
-            startActivity(Intent(this,UserDetailsActivity::class.java))
+            startActivity(Intent(this, UserDetailsActivity::class.java))
 
 
         }

@@ -1,9 +1,9 @@
-package com.ushatech.porter
+package com.ushatech.porter.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ushatech.porter.databinding.ActivityLoginBinding
+import com.ushatech.porter.presentation.BaseActivity
 
 class LoginActivity : BaseActivity() {
 
@@ -23,7 +23,7 @@ class LoginActivity : BaseActivity() {
     private fun initClicks() {
         binding.btnLogin.setOnClickListener {
             if(isValidated()){
-                startActivity(Intent(this@LoginActivity,VerifyOtpActivity::class.java))
+                startActivity(Intent(this@LoginActivity, VerifyOtpActivity::class.java))
                 finish()
             }
 
