@@ -2,6 +2,7 @@ package com.ushatech.porter.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -17,13 +18,15 @@ class DashboardActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
-        initNav()
         setContentView(binding.root)
+        initNav()
+
     }
 
-    @OptIn(NavigationUiSaveStateControl::class)
     private fun initNav() {
-        val navController = Navigation.findNavController(this@DashboardActivity, R.id.activity_main_nav_host_fragment)
-        NavigationUI.setupWithNavController(binding.bottomNavigationbar, navController, false)
+        val navController: NavController =
+            findNavController(this@DashboardActivity, R.id.activity_main_nav_host_fragment)
+        val bottomNavigationView = binding.bottomNavigationbar
+        NavigationUI.setupWithNavController(bottomNavigationView, navController)
     }
 }
