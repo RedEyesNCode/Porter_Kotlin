@@ -5,22 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.ushatech.porter.R
+import com.ushatech.porter.databinding.BottomSheetLogoutBinding
+import com.ushatech.porter.databinding.FragmentAccountBinding
+import com.ushatech.porter.presentation.BaseFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AccountFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class AccountFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+class AccountFragment : BaseFragment() {
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var binding:FragmentAccountBinding
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +36,45 @@ class AccountFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentAccountBinding.inflate(layoutInflater)
+        initClicks()
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false)
+        return binding.root
+    }
+
+    private fun initClicks() {
+
+        binding.tvlogout.setOnClickListener {
+            // show the bottom sheet dialog.
+            setupBottomSheetDialog()
+
+
+
+
+
+
+
+        }
+
+    }
+
+    private fun setupBottomSheetDialog() {
+        var bottomSheetBinding = BottomSheetLogoutBinding.inflate(layoutInflater)
+        var bottomSheetDialog = BottomSheetDialog(fragmentContext,R.style.BottomSheetDialogTheme)
+        bottomSheetDialog.setContentView(bottomSheetBinding.root)
+
+        bottomSheetBinding.btnCancel.setOnClickListener {
+
+            bottomSheetDialog.dismiss()
+        }
+        bottomSheetBinding.btnLogout.setOnClickListener {
+            activity?.finish()
+            showToast("Logout successfully ! ")
+
+
+        }
+        bottomSheetDialog.show()
     }
 
     companion object {

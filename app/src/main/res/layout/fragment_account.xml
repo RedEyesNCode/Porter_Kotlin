@@ -187,7 +187,6 @@
                         android:layout_height="wrap_content"
                         android:text="Call us"
                         android:textColor="@color/white"
-                        android:layout_marginStart="@dimen/_10sdp"
                         android:textSize="@dimen/_10sdp" />
 
 

@@ -21,4 +21,6 @@
     <string name="payment">Payment</string>
     <string name="balance_0">Balance : 0</string>
     <string name="add_money">Add Money</string>
+    <string name="are_you_sure">Are you sure ?</string>
+    <string name="enter_amount">Enter Amount</string>
 </resources>

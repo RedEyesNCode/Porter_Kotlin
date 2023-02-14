@@ -56,6 +56,7 @@
                 android:layout_centerVertical="true"
                 android:paddingVertical="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/tvAddmoney"
                 android:paddingHorizontal="@dimen/_7sdp"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/background_light_blue"
