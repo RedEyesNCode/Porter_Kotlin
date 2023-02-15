@@ -217,7 +217,7 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
                     currentLocation = LatLng(location.latitude,location.longitude)
 
                     var gps = LatLng(location.latitude, location.longitude)
-                    mMap.addMarker(MarkerOptions().position(gps).title("You are here !"))
+//                    mMap.addMarker(MarkerOptions().position(gps).title("You are here !"))
                     val cameraPosition = CameraPosition.Builder()
                         .target(gps) // Sets the center of the map to location user
                         .zoom(15f) // Sets the zoom
