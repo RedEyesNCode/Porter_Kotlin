@@ -5,11 +5,34 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".ui.fragment.HomeFragment">
-    <fragment
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/google_map"
-        android:layout_marginBottom="@dimen/_4sdp"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:layout_height="match_parent">
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/google_map"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <include
+            android:id="@+id/toolbarMaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_map"/>
+        <include
+            android:id="@+id/bottomBarMaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/bottombar_map"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
 
 </LinearLayout>

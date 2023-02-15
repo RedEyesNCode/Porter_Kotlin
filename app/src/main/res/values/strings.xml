@@ -27,5 +27,9 @@
     <string name="last_name">Last Name</string>
     <string name="first_name">First Name</string>
     <string name="email_id">Email id</string>
+    <string name="sorry_we_do_not_allow_pickup_in_the_area_you_have_selected">Sorry, we do not allow pickup in the area you have selected</string>
+    <string name="all_india_parcel">All India Parcel</string>
+    <string name="change_pickup_location">Change pickup location</string>
+    <string name="packer_u0026_movers"><![CDATA[Packer & Movers]]></string>
 
 </resources>
