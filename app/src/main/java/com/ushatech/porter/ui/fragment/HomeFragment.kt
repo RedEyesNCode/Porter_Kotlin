@@ -170,9 +170,8 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
         ).build().send { result ->
             if (result.anyGranted()) {
                 getLastKnownLocation()
-
             }else{
-                showToast("Please allow location permission to enable this feature.")
+                showSnackBar(binding.root,"Make sure you allow Precise Location permission")
 
             }
         }
