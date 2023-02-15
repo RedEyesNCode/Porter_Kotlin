@@ -49,6 +49,7 @@
                 android:layout_marginStart="@dimen/_6sdp"
                 android:elevation="@dimen/_8sdp"
                 android:paddingHorizontal="@dimen/_7sdp"
+                android:id="@+id/btnChangePickLocation"
                 android:orientation="horizontal"
                 android:background="@drawable/background_rounded_blue"
                 android:paddingVertical="@dimen/_8sdp"
