@@ -55,12 +55,15 @@ class CourierEstimateActivity : BaseActivity() {
 
         binding.btnEstimatePickup.setOnClickListener {
             if(isValidated()){
-
-
+                showToast("Validated Successfully !")
             }
+        }
+        binding.ivClose.setOnClickListener {
+            finish()
 
 
         }
+
 
     }
     fun isValidated():Boolean{

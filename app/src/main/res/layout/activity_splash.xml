@@ -12,11 +12,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:layout_width="@dimen/_125sdp"
-            android:src="@drawable/ic_app"
+            android:layout_height="@dimen/_125sdp"
             android:layout_centerInParent="true"
-            android:layout_height="@dimen/_125sdp"/>
+            android:src="@drawable/ic_app" />
 
 
 

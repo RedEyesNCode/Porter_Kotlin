@@ -5,6 +5,8 @@ import android.os.Bundle
 import com.ushatech.porter.databinding.ActivityUserDetailsBinding
 import com.ushatech.porter.presentation.BaseActivity
 import com.ushatech.porter.utils.AppUtils
+import com.ushatech.porter.utils.SessionKeys
+import com.ushatech.porter.utils.SimpleSession
 
 class UserDetailsActivity : BaseActivity() {
 
@@ -31,6 +33,7 @@ class UserDetailsActivity : BaseActivity() {
 
                 val dashboardIntent =Intent(this@UserDetailsActivity, DashboardActivity::class.java)
                 dashboardIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                SimpleSession(this@UserDetailsActivity).put(SessionKeys.IS_INTRO_DONE,true)
                 startActivity(dashboardIntent)
 
             }

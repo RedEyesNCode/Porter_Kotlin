@@ -164,7 +164,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:textSize="@dimen/_11sdp"
-                        android:text="Mail us at help@ushatech.in"
+                        android:text="Mail us at info.ushatechsolution@gmail.com"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 

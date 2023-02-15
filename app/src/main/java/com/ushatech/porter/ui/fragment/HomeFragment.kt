@@ -7,8 +7,8 @@ import android.content.Intent
 import android.location.LocationRequest
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import com.fondesa.kpermissions.allGranted
@@ -35,17 +35,11 @@ import com.ushatech.porter.presentation.BaseFragment
 import com.ushatech.porter.ui.activity.CourierEstimateActivity
 import java.util.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener  {
+class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, View.OnTouchListener  {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -62,6 +56,10 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
     private var currentLocation: LatLng? = null
     private lateinit var supportMapFragment: SupportMapFragment
     private val AUTOCOMPLETE_REQUEST_CODE = 1
+
+    override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+        TODO("Not yet implemented")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,6 +85,23 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
 
     private fun setupAutoCompletePlaces() {
         Places.initialize(fragmentContext, getString(R.string.GOOGLE_API_KEY), Locale.US);
+    }
+
+    private fun setupCameraChangeListener(){
+        if(mMap!=null){
+            mMap.setOnCameraChangeListener(object : GoogleMap.OnCameraChangeListener {
+                override fun onCameraChange(cameraPosition: CameraPosition) {
+                    var latLangCurrentMap = mMap.cameraPosition.target
+                    showLog("${cameraPosition.target}")
+                    showSnackBar(binding.root,"${cameraPosition.target}")
+
+                }
+            })
+
+        }
+
+
+
     }
 
     private fun setupGoogleMaps() {
@@ -146,6 +161,7 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
     override fun onMapReady(p0: GoogleMap) {
         mMap = intializeMapData(p0)
         getLastKnownLocation()
+        setupCameraChangeListener()
     }
     fun checkPermissions() {
         permissionsBuilder(
