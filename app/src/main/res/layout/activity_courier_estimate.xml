@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CourierEstimateActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/_12sdp"
+        android:elevation="@dimen/_9sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvLegal"
+            android:text="@string/courier_services"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_close"
+            android:id="@+id/ivClose"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="@dimen/_2sdp"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/_8sdp"
+        app:cardBackgroundColor="@color/blue"
+        android:background="@drawable/gradient_green"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_height="@dimen/_165sdp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@drawable/background_top_rounded"
+
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:background="@drawable/background_top_rounded"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="@dimen/_20sdp"
+                android:background="@drawable/background_grey_rounded"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_height="@dimen/_6sdp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Send a Package Anywhere"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Shipping made easy from the comfort of your house"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/pickup_address"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@null"
+                    android:id="@+id/edtPickupAdress"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:focusable="false"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_pickup_address"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Pincode"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@null"
+                    android:inputType="number"
+                    android:id="@+id/edtPincode"
+                    android:layout_marginTop="@dimen/_12sdp"
+
+                    android:layout_weight="1"
+                    android:hint="Enter pincode"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/drop_address"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@null"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:focusable="false"
+
+                    android:id="@+id/edtDropAddress"
+                    android:layout_weight="1"
+                    android:hint="Enter Drop Address"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="@dimen/_12sdp"
+
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@null"
+                    android:id="@+id/edtItemWeight"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:hint="Weight of Item"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:id="@+id/btnEstimatePickup"
+                android:text="Get Estimate"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:textColor="@color/white"
+                android:background="@drawable/background_rounded_blue"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

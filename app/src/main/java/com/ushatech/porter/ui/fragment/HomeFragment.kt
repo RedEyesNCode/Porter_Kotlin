@@ -32,6 +32,7 @@ import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.ushatech.porter.R
 import com.ushatech.porter.databinding.FragmentHomeBinding
 import com.ushatech.porter.presentation.BaseFragment
+import com.ushatech.porter.ui.activity.CourierEstimateActivity
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -101,7 +102,6 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
             // Set the fields to specify which types of place data to
             // return after the user has made a selection.
             val fields = listOf(Place.Field.ID, Place.Field.NAME)
-
             // Start the autocomplete intent.
             val intent = Autocomplete.IntentBuilder(AutocompleteActivityMode.OVERLAY, fields)
                 .setTypesFilter(listOf(TypeFilter.CITIES.toString()))
@@ -110,6 +110,12 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
             startActivityForResult(intent, AUTOCOMPLETE_REQUEST_CODE)
 
         }
+        binding.bottomBarMaps.btnAllIndiaParcel.setOnClickListener {
+            val intentCourierEstimate = Intent(fragmentContext,CourierEstimateActivity::class.java)
+            startActivity(intentCourierEstimate)
+        }
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -31,5 +31,9 @@
     <string name="all_india_parcel">All India Parcel</string>
     <string name="change_pickup_location">Change pickup location</string>
     <string name="packer_u0026_movers"><![CDATA[Packer & Movers]]></string>
+    <string name="courier_services">Courier Services</string>
+    <string name="enter_pickup_address">Enter Pickup address</string>
+    <string name="pickup_address">Pickup Address</string>
+    <string name="drop_address">Drop Address</string>
 
 </resources>
