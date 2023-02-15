@@ -4,22 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@drawable/gradient_green"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     tools:context=".ui.activity.LoginActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:text="@string/appawheels_com"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/lato_bold"
-        android:textSize="@dimen/_16sdp"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/appawheels_com"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+        </TableLayout>
+
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,6 +81,7 @@
                     android:layout_width="wrap_content"
                     app:ccp_defaultPhoneCode="91"
                     android:clickable="false"
+                    app:ccp_clickable="false"
                     android:focusable="false"
                     android:id="@+id/ccpMobileCountryCode"
                     android:layout_height="wrap_content"/>

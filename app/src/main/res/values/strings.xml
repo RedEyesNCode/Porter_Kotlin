@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">porter</string>
+    <string name="app_name">AppaWheels.com</string>
     <string name="appawheels_com">AppaWheels.com</string>
     <string name="with_a_valid_number_you_can_access_our_deliveries_and_our_other_services">With a valid number, You can access our deliveries and our other services.</string>
     <string name="welcome">Welcome</string>
@@ -24,5 +24,8 @@
     <string name="are_you_sure">Are you sure ?</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="GOOGLE_API_KEY">AIzaSyD7PGsX_T85cAxk4z61oOrpGsAcrcdGo3o</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email_id">Email id</string>
 
 </resources>

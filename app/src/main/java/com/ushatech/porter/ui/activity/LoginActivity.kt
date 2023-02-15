@@ -23,8 +23,10 @@ class LoginActivity : BaseActivity() {
     private fun initClicks() {
         binding.btnLogin.setOnClickListener {
             if(isValidated()){
-                startActivity(Intent(this@LoginActivity, VerifyOtpActivity::class.java))
-                finish()
+                val userDetailsIntent = Intent(this@LoginActivity,UserDetailsActivity::class.java)
+                userDetailsIntent.putExtra("USER_NUMBER",binding.edtMobileNumber.text.toString().trim())
+                startActivity(userDetailsIntent)
+                // Not Finishing the activity until next login. to dashboard
             }
 
 

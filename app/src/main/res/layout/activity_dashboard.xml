@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:saveEnabled="false"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="#205BBF"
+        app:itemIconTint="@color/blue"
         app:labelVisibilityMode="labeled"
-        app:itemRippleColor="#205BBF"
+        app:itemRippleColor="@color/blue"
         app:itemTextColor="@color/black"
         app:menu="@menu/bottom_nav_menu" />
 </RelativeLayout>

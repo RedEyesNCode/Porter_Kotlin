@@ -21,4 +21,7 @@
     <string name="add_money">Add Money</string>
     <string name="are_you_sure">Are you sure ?</string>
     <string name="enter_amount">Enter Amount</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email_id">Email id</string>
 </resources>

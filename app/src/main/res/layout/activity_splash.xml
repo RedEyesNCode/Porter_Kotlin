@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+
+    android:background="@drawable/gradient_green"
     android:layout_height="match_parent"
     tools:context=".ui.activity.SplashActivity">
 
@@ -25,6 +26,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:id="@+id/progressDialog"
+            android:indeterminateTint="@color/white"
             android:layout_marginBottom="@dimen/_12sdp"
             android:layout_height="wrap_content"/>
 
