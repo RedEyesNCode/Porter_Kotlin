@@ -58,10 +58,8 @@ class UserDetailsActivity : BaseActivity() {
         }else if(binding.edtEmailId.text.toString().isEmpty()){
             binding.edtEmailId.error = "Please enter email id."
             return false
-
-        }else if(AppUtils().validate(binding.edtEmailId.text.toString())){
+        }else if(!AppUtils().validate(binding.edtEmailId.text.toString())){
             binding.edtEmailId.error = "Please enter valid email id."
-
             return false
         }else{
 

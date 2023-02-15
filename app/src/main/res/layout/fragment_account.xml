@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_16sdp"
-                android:text="ASHUTOSH SINGH"
+                android:text="USER NAME"
                 android:textAllCaps="true"
                 android:fontFamily="@font/lato_bold"
                 android:layout_height="wrap_content"/>
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="6261319133"
+                android:text="0987654321"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp" />
@@ -164,7 +164,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:layout_marginVertical="@dimen/_8sdp"
                         android:textSize="@dimen/_11sdp"
-                        android:text="Mail us at info.ushatechsolution@gmail.com"
+                        android:text="Mail us at support@appawheels.com"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
