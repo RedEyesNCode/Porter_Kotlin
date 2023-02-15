@@ -33,6 +33,7 @@ import com.ushatech.porter.R
 import com.ushatech.porter.databinding.FragmentHomeBinding
 import com.ushatech.porter.presentation.BaseFragment
 import com.ushatech.porter.ui.activity.CourierEstimateActivity
+import com.ushatech.porter.ui.activity.PickerMoversActivity
 import java.util.*
 
 
@@ -129,6 +130,12 @@ class HomeFragment : BaseFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClick
             val intentCourierEstimate = Intent(fragmentContext,CourierEstimateActivity::class.java)
             startActivity(intentCourierEstimate)
         }
+        binding.bottomBarMaps.btnPackerMovers.setOnClickListener {
+            val intentBottomPackerMovers = Intent(fragmentContext,PickerMoversActivity::class.java)
+            startActivity(intentBottomPackerMovers)
+
+        }
+
 
 
     }
