@@ -30,4 +30,12 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
 
     </style>
+
+    <style name="EditTextOutLineStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">@dimen/_1sdp</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
 </resources>

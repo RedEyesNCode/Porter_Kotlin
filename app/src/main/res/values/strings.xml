@@ -44,5 +44,8 @@
     <string name="proceed">Proceed</string>
     <string name="select_items">Select items</string>
     <string name="steps_1_4">Steps(1/4)</string>
+    <string name="enter_flat_no">Enter Flat NO</string>
+    <string name="has_service_lift">Has Service Lift?</string>
+    <string name="enter_drop_address">Enter drop address</string>
 
 </resources>

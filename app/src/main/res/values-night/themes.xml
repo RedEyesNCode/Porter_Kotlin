@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">@color/green</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="EditTextOutLineStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">@dimen/_1sdp</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
 </resources>
