@@ -54,5 +54,7 @@
     <string name="here_s_what_you_get_with_part_load">Here\'s what you get with Part Load</string>
     <string name="packaging_multi_layered_bubble_wrap">Packaging - Multi layered bubble wrap</string>
     <string name="all_items_will_be_safely_packed_with_a_single_layer_of_bubble_wrap">All items will be safely packed with a single layer of bubble wrap.</string>
+    <string name="TERMS">https://appawheels.com/terms-of-service.html</string>
+    <string name="POLICY">https://appawheels.com/privacy-policy.html</string>
 
 </resources>

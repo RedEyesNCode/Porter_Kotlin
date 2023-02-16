@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.TermsConditionsActivity">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CommonTitleBar"
+        layout="@layout/common_top_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="@dimen/_4sdp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/termsLayout"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvTerms"
+            android:text="Terms \u0026 Conditons"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/_15sdp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_height="@dimen/_4sdp"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="@dimen/_4sdp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/policyLayout"
+
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvPrivacy"
+            android:text="Privacy Policy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/_15sdp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_height="@dimen/_4sdp"/>
+
+
+
+</LinearLayout>

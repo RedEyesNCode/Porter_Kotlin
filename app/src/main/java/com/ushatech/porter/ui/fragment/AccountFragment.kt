@@ -1,5 +1,6 @@
 package com.ushatech.porter.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import com.ushatech.porter.R
 import com.ushatech.porter.databinding.BottomSheetLogoutBinding
 import com.ushatech.porter.databinding.FragmentAccountBinding
 import com.ushatech.porter.presentation.BaseFragment
+import com.ushatech.porter.ui.activity.TermsConditionsActivity
 
 
 private const val ARG_PARAM1 = "param1"
@@ -48,14 +50,16 @@ class AccountFragment : BaseFragment() {
         binding.tvlogout.setOnClickListener {
             // show the bottom sheet dialog.
             setupBottomSheetDialog()
+        }
+        binding.tvLegal.setOnClickListener {
 
-
-
-
-
+            var termsIntent = Intent(fragmentContext,TermsConditionsActivity::class.java)
+            fragmentContext.startActivity(termsIntent)
 
 
         }
+
+
 
     }
 

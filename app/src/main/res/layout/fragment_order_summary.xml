@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.OrderSummaryFragment">
+
+    <TextView
+        android:id="@+id/tvDateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Order Summary"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_item_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/grey"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/lato_regular"
+            android:text="Amount Quoted"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_price"
+            android:fontFamily="@font/lato_regular"
+            android:text="$"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+
+        <View
+            android:id="@+id/viewline1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_price"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grey_dark" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_shopping_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewline1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grey">
+
+            <TextView
+                android:id="@+id/tv_shopping_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/lato_regular"
+                android:text="Relocation Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_spg_price"
+                android:fontFamily="@font/lato_regular"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:id="@+id/tv_spg_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <View
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_spg_price"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey_dark" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_shopping_price"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grey">
+
+            <TextView
+                android:id="@+id/tv_t_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/lato_regular"
+                android:text="Service type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_total_price"
+                android:fontFamily="@font/lato_regular"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_total_price"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey_dark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_items_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_total_price"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/lato_regular"
+                android:text="Service type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvItemCount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+            <View
+                android:id="@+id/viewline3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvItemCount"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey_dark" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

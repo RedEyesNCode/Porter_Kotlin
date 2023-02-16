@@ -5,10 +5,7 @@ import android.os.Bundle
 import com.ushatech.porter.R
 import com.ushatech.porter.databinding.ActivityPickItemsBinding
 import com.ushatech.porter.presentation.BaseActivity
-import com.ushatech.porter.ui.fragment.ItemCartFragment
-import com.ushatech.porter.ui.fragment.ItemStepFragment
-import com.ushatech.porter.ui.fragment.SelectLocationFragment
-import com.ushatech.porter.ui.fragment.ServiceTypeFragment
+import com.ushatech.porter.ui.fragment.*
 import com.ushatech.porter.utils.FragmentUtils
 
 class   PickItemsActivity : BaseActivity() {
@@ -44,6 +41,8 @@ class   PickItemsActivity : BaseActivity() {
             if(supportFragmentManager.backStackEntryCount==2){
                 binding.tvStepCounter.setText("Steps(1/4)")
                 binding.tvStepTitle.setText("Select items")
+                binding.btnProceed.setText("Proceed")
+
                 supportFragmentManager.popBackStack()
 
             }else if(supportFragmentManager.backStackEntryCount==1){
@@ -51,6 +50,14 @@ class   PickItemsActivity : BaseActivity() {
             }else if(supportFragmentManager.backStackEntryCount==3){
                 binding.tvStepCounter.setText("Steps(2/4)")
                 binding.tvStepTitle.setText("Location details")
+                binding.btnProceed.setText("Proceed")
+
+                supportFragmentManager.popBackStack()
+            }else if(supportFragmentManager.backStackEntryCount==4){
+                binding.tvStepCounter.setText("Steps(3/4)")
+                binding.tvStepTitle.setText("What type of service do you need?")
+                binding.btnProceed.setText("Proceed")
+
                 supportFragmentManager.popBackStack()
             }
 
@@ -62,12 +69,20 @@ class   PickItemsActivity : BaseActivity() {
 
             if(supportFragmentManager.backStackEntryCount==1){
                 binding.tvStepCounter.setText("Steps(2/4)")
+                binding.btnProceed.setText("Proceed")
+
                 binding.tvStepTitle.setText("Location details")
                 FragmentUtils().addFragmentBackStack(supportFragmentManager,R.id.stepsContainer,SelectLocationFragment(),SelectLocationFragment::class.java.simpleName,true)
             }else if(supportFragmentManager.backStackEntryCount==2){
                 binding.tvStepCounter.setText("Steps(3/4)")
+                binding.btnProceed.setText("Proceed")
                 binding.tvStepTitle.setText("What type of service do you need?")
                 FragmentUtils().addFragmentBackStack(supportFragmentManager,R.id.stepsContainer,ServiceTypeFragment(),ServiceTypeFragment::class.java.simpleName,true)
+            }else if(supportFragmentManager.backStackEntryCount==3){
+                binding.tvStepCounter.setText("Steps(4/4)")
+                binding.tvStepTitle.setText("Confirm Booking")
+                binding.btnProceed.setText("Confirm Booking")
+                FragmentUtils().addFragmentBackStack(supportFragmentManager,R.id.stepsContainer,OrderSummaryFragment(),OrderSummaryFragment::class.java.simpleName,true)
             }
 
         }
