@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:elevation="@dimen/_8sdp"
+    android:padding="@dimen/_4sdp"
+
+    android:layout_gravity="end"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_75sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_6sdp"
+
+        app:cardElevation="@dimen/_9sdp"
+        android:layout_height="@dimen/_75sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/most_popular"
+                android:textSize="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/lato_regular"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/background_green_inside_stroke"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvDateNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:fontFamily="@font/lato_black"
+                android:text="PART LOAD"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvPriceDetail"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/lato_bold"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="34,205"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

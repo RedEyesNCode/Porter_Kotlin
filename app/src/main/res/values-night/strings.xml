@@ -44,4 +44,11 @@
     <string name="enter_flat_no">Enter Flat NO</string>
     <string name="has_service_lift">Has Service Lift?</string>
     <string name="enter_drop_address">Enter drop address</string>
+    <string name="select_shifting_date">Select shifting date</string>
+    <string name="tommorow">Tommorow</string>
+    <string name="packages_for_20th_jan_2023">Packages for 20th Jan 2023</string>
+    <string name="most_popular">MOST POPULAR</string>
+    <string name="here_s_what_you_get_with_part_load">Here\'s what you get with Part Load</string>
+    <string name="packaging_multi_layered_bubble_wrap">Packaging - Multi layered bubble wrap</string>
+    <string name="all_items_will_be_safely_packed_with_a_single_layer_of_bubble_wrap">All items will be safely packed with a single layer of bubble wrap.</string>
 </resources>

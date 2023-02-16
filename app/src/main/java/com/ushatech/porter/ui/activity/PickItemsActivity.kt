@@ -8,6 +8,7 @@ import com.ushatech.porter.presentation.BaseActivity
 import com.ushatech.porter.ui.fragment.ItemCartFragment
 import com.ushatech.porter.ui.fragment.ItemStepFragment
 import com.ushatech.porter.ui.fragment.SelectLocationFragment
+import com.ushatech.porter.ui.fragment.ServiceTypeFragment
 import com.ushatech.porter.utils.FragmentUtils
 
 class   PickItemsActivity : BaseActivity() {
@@ -47,6 +48,10 @@ class   PickItemsActivity : BaseActivity() {
 
             }else if(supportFragmentManager.backStackEntryCount==1){
                 finish()
+            }else if(supportFragmentManager.backStackEntryCount==3){
+                binding.tvStepCounter.setText("Steps(2/4)")
+                binding.tvStepTitle.setText("Location details")
+                supportFragmentManager.popBackStack()
             }
 
         }
@@ -59,6 +64,10 @@ class   PickItemsActivity : BaseActivity() {
                 binding.tvStepCounter.setText("Steps(2/4)")
                 binding.tvStepTitle.setText("Location details")
                 FragmentUtils().addFragmentBackStack(supportFragmentManager,R.id.stepsContainer,SelectLocationFragment(),SelectLocationFragment::class.java.simpleName,true)
+            }else if(supportFragmentManager.backStackEntryCount==2){
+                binding.tvStepCounter.setText("Steps(3/4)")
+                binding.tvStepTitle.setText("What type of service do you need?")
+                FragmentUtils().addFragmentBackStack(supportFragmentManager,R.id.stepsContainer,ServiceTypeFragment(),ServiceTypeFragment::class.java.simpleName,true)
             }
 
         }
