@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 app:cardUseCompatPadding="true"
                 app:cardElevation="@dimen/_8sdp"
-                app:cardBackgroundColor="@color/blue"
+                app:cardBackgroundColor="@color/green"
                 android:background="@drawable/gradient_green"
                 android:layout_margin="@dimen/_8sdp"
                 android:layout_height="@dimen/_165sdp"/>
@@ -155,14 +155,14 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tvChatWithUs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_centerInParent="true"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/lato_regular"
-                    android:text="@string/chat_with_us"
-                    android:id="@+id/tvChatWithUs"
                     android:gravity="center"
+                    android:text="@string/chat_with_us"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_11sdp" />
 

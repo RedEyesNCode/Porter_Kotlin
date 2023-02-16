@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:textAllCaps="false"
             android:layout_marginTop="@dimen/_18sdp"
-            android:textColor="@color/blue"
+            android:textColor="@color/green"
             android:fontFamily="@font/lato_regular"
             android:background="@drawable/background_stroke_blue"
 

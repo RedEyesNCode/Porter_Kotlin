@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PickItemsActivity">
+    <include
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/CommonTitleBar"
+        layout="@layout/common_top_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/stepsCounterLayout"
+        android:paddingBottom="@dimen/_8sdp"
+        android:background="@color/grey"
+        android:layout_below="@id/CommonTitleBar"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/steps_1_4"
+            android:id="@+id/tvStepCounter"
+            android:textColor="@color/grey_dark"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/select_items"
+            android:layout_below="@id/tvStepCounter"
+            android:id="@+id/tvStepTitle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/stepsContainer"
+        android:layout_width="match_parent"
+        android:layout_below="@id/stepsCounterLayout"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBarDashboard"
+        android:layout_centerInParent="true">
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/_12sdp"
+        android:id="@+id/bottomBarDashboard"
+        android:elevation="@dimen/_9sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/btnLogout"
+            android:layout_alignParentEnd="true"
+            android:text="@string/proceed"
+            android:textSize="@dimen/_13sdp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/lato_regular"
+            android:paddingHorizontal="@dimen/_44sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/background_rounded_blue_max"
+            android:paddingVertical="@dimen/_14sdp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:src="@drawable/ic_arrow_right"
+            android:id="@+id/ivBackFragment"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:rotation="180"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/_35sdp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

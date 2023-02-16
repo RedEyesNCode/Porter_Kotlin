@@ -4,12 +4,13 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_marginStart="@dimen/_6sdp"
+    android:id="@+id/mainCardLayout"
     android:background="@color/white"
     android:layout_height="wrap_content">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="@dimen/_145sdp"
         android:layout_marginEnd="@dimen/_5sdp"
-        app:cardBackgroundColor="@color/blue"
+        app:cardBackgroundColor="@color/green"
         app:cardCornerRadius="@dimen/_6sdp"
 
         app:cardElevation="@dimen/_9sdp"
@@ -66,7 +67,6 @@
                 android:layout_height="@dimen/_95sdp"/>
 
             <TextView
-                android:id="@+id/tvnoOrders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

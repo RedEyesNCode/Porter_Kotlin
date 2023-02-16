@@ -37,5 +37,8 @@
     <string name="packers_u0026_movers"><![CDATA[Packers & Movers]]></string>
     <string name="within_city">Within City</string>
     <string name="available_in_12_cities_across_india">Available in 12 cities across india</string>
-    <string name="chat_with_us">Chat With Us</string>
+    <string name="chat_with_us">Call Us</string>
+    <string name="proceed">Proceed</string>
+    <string name="select_items">Select items</string>
+    <string name="steps_1_4">Steps(1/4)</string>
 </resources>

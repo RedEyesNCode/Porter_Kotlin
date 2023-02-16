@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         app:cardUseCompatPadding="true"
         app:cardElevation="@dimen/_8sdp"
-        app:cardBackgroundColor="@color/blue"
+        app:cardBackgroundColor="@color/green"
         android:background="@drawable/gradient_green"
         android:layout_margin="@dimen/_8sdp"
         android:layout_height="@dimen/_165sdp"/>

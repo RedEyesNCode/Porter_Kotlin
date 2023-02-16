@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/tvChangeNumber"
             android:fontFamily="@font/lato_bold"
-            android:textColor="@color/blue"
+            android:textColor="@color/green"
             android:textSize="@dimen/_11sdp"
             android:text="@string/change"
             android:layout_marginStart="@dimen/_8sdp"
@@ -102,14 +102,14 @@
         android:text="@string/verify"
         android:textAllCaps="false"
         android:layout_marginTop="@dimen/_18sdp"
-        android:textColor="@color/blue"
+        android:textColor="@color/green"
         android:background="@drawable/background_stroke_blue"
 
         android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="wrap_content"
         android:fontFamily="@font/lato_bold"
-        android:textColor="@color/blue"
+        android:textColor="@color/green"
         android:textSize="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_13sdp"
 

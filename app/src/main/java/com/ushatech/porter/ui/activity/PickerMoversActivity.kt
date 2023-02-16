@@ -24,6 +24,18 @@ class PickerMoversActivity : BaseActivity() {
             finish()
 
         }
+        binding.cardOutSideCity.mainCardLayout.setOnClickListener {
+            val intentPickItemsIntent = Intent(this@PickerMoversActivity,PickItemsActivity::class.java)
+            startActivity(intentPickItemsIntent)
+
+        }
+        binding.cardWithinCity.mainCardLayout.setOnClickListener {
+            val intentPickItemsIntent = Intent(this@PickerMoversActivity,PickItemsActivity::class.java)
+            startActivity(intentPickItemsIntent)
+
+        }
+
+
         binding.btnChatWithUs.setOnClickListener {
 
             val phone = "+34666777888"
