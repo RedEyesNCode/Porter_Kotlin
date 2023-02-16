@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.activity.PickerMoversActivity">
+
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:paddingVertical="@dimen/_12sdp"
@@ -15,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/tvLegal"
-            android:text="Packers \u0026 Movers"
+            android:text="@string/packers_u0026_movers"
             android:textColor="@color/black"
             android:layout_centerHorizontal="true"
             android:textSize="@dimen/_14sdp"
@@ -30,40 +33,167 @@
             android:layout_height="@dimen/_15sdp"/>
 
     </RelativeLayout>
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="@dimen/_8sdp"
-        app:cardBackgroundColor="@color/blue"
-        android:background="@drawable/gradient_green"
-        android:layout_margin="@dimen/_8sdp"
-        android:layout_height="@dimen/_165sdp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_19sdp"
-            android:text="@string/shifting_your_house_now_easier_than_ever"
-            android:textAllCaps="false"
-            android:fontFamily="@font/lato_bold"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:id="@+id/tvnoOrders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/house_shifting_need_to_be_a_tedious_task_it_can_be_a_memorable_experience"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/lato_regular"
-            android:lineSpacingExtra="@dimen/_5sdp"
 
-            android:textSize="@dimen/_12sdp" />
-    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/blue"
+                android:background="@drawable/gradient_green"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_height="@dimen/_165sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_19sdp"
+                    android:text="@string/shifting_your_house_now_easier_than_ever"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvnoOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/house_shifting_need_to_be_a_tedious_task_it_can_be_a_memorable_experience"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lato_regular"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cardWithinCity"
+                    layout="@layout/pickmove_card"/>
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:id="@+id/cardOutSideCity"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    layout="@layout/pickmove_card"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dotted_grey_line"
+                    android:layout_height="@dimen/_5sdp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:id="@+id/tvOrLayout"
+                    android:paddingHorizontal="@dimen/_7sdp"
+                    android:background="@drawable/background_light_blue"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OR"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:weightSum="2"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:id="@+id/btnChatWithUs"
+                android:background="@drawable/background_stroke_blue"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/chat_with_us"
+                    android:id="@+id/tvChatWithUs"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+
+                <ImageView
+                    android:id="@+id/ivArrrow"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/tvChatWithUs"
+                    android:layout_marginEnd="@dimen/_11sdp"
+                    android:src="@drawable/ic_whatsapp"
+                    app:tint="@color/white" />
+
+
+
+
+            </RelativeLayout>
+        </TableLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
 
 
 

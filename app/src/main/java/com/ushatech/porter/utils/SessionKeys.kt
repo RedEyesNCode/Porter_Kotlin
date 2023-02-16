@@ -6,8 +6,8 @@ object SessionKeys {
     const val USER = "USER_DATA"
     const val SESSION = "DEV_SESSION"
 
-    const val PREFERENCES_NAME = "FLORIFY"
-    const val PREFERENCES_NAME_SIMPLE = "FLORIFY_SIMPLE_SESSION"
+    const val PREFERENCES_NAME = "PORTER_CLONE"
+    const val PREFERENCES_NAME_SIMPLE = "PORTER_CLONE"
 
 
 
@@ -17,5 +17,7 @@ object SessionKeys {
 
 
     const val IS_INTRO_DONE = "IS_INTRO_DONE"
+
+    const val SUPPORT_NUMBER = "+928269228947"
 
 }

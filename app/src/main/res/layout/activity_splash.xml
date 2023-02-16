@@ -14,8 +14,8 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="@dimen/_125sdp"
-            android:layout_height="@dimen/_125sdp"
+            android:layout_width="@dimen/_175sdp"
+            android:layout_height="@dimen/_175sdp"
             android:layout_centerInParent="true"
             android:src="@drawable/ic_app" />
 
@@ -27,7 +27,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:id="@+id/progressDialog"
-            android:indeterminateTint="@color/white"
+            android:indeterminateTint="@color/blue"
             android:layout_marginBottom="@dimen/_12sdp"
             android:layout_height="wrap_content"/>
 
