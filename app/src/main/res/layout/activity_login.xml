@@ -21,11 +21,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:text="@string/appawheels_com"
-                android:layout_alignParentTop="true"
                 android:fontFamily="@font/lato_bold"
                 android:textSize="@dimen/_16sdp"
                 android:textColor="@color/white"
-                android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_height="wrap_content"/>
@@ -92,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/edtMobileNumber"
                 android:layout_gravity="center"
-                android:hint="Mobile Number"
+                android:hint="@string/mobile_number"
                 android:background="@drawable/background_grey_solid"
                 android:layout_height="match_parent"
                 android:paddingStart="@dimen/_6sdp"

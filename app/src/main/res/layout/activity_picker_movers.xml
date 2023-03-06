@@ -10,29 +10,6 @@
 
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:paddingVertical="@dimen/_12sdp"
-        android:elevation="@dimen/_9sdp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/tvLegal"
-            android:text="@string/packers_u0026_movers"
-            android:textColor="@color/black"
-            android:layout_centerHorizontal="true"
-            android:textSize="@dimen/_14sdp"
-            android:fontFamily="@font/lato_bold"
-            android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="@dimen/_15sdp"
-            android:src="@drawable/ic_close"
-            android:id="@+id/ivClose"
-            android:layout_marginEnd="@dimen/_12sdp"
-            android:layout_alignParentEnd="true"
-            android:layout_height="@dimen/_15sdp"/>
-
-    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -20,10 +20,10 @@ class PickerMoversActivity : BaseActivity() {
     }
 
     private fun initClicks() {
-        binding.ivClose.setOnClickListener {
+        /*binding.ivClose.setOnClickListener {
             finish()
 
-        }
+        }*/
         binding.cardOutSideCity.mainCardLayout.setOnClickListener {
             val intentPickItemsIntent = Intent(this@PickerMoversActivity,PickItemsActivity::class.java)
             startActivity(intentPickItemsIntent)
