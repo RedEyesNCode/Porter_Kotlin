@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ushatech.porter.data.RegistrationResponse
+import com.ushatech.porter.data.RequirementMetaResponse
 import com.ushatech.porter.domain.MainRepository
 import com.ushatech.porter.utils.Constant
 import kotlinx.coroutines.launch
@@ -24,6 +25,74 @@ class SignupViewModel(): ViewModel() {
     val registerUserResponse:LiveData<RegistrationResponse> = _commonResponse
     val mainRepo = MainRepository()
 
+    private val _requirementUiMeta = MutableLiveData<RequirementMetaResponse>()
+    val requirementMetaResponse:LiveData<RequirementMetaResponse> = _requirementUiMeta
+
+
+    fun getAppRequirements() = viewModelScope.launch {
+
+        getAppRequirementsCoroutine()
+
+
+    }
+
+    private suspend fun getAppRequirementsCoroutine() {
+        try {
+
+            val response = mainRepo.getRequirementUiMeta()
+            _isLoading.value = true
+            response.enqueue(object : Callback<RequirementMetaResponse> {
+
+                override fun onResponse(
+                    call: Call<RequirementMetaResponse>,
+                    response: Response<RequirementMetaResponse>
+                ) {
+                    _isLoading.value = false
+                    if (response.code() == 200) {
+                        // status 1 is success in this api.
+
+                        if(response.body()?.status==1){
+                            _requirementUiMeta.postValue(response.body())
+
+                        }else{
+
+                            _isFailed.value = "${Constant.OOPS_SW} ${response.code()}"
+
+
+                        }
+
+                    } else {
+                        _isFailed.value = "${Constant.OOPS_SW} ${response.code()}"
+                    }
+                }
+
+                override fun onFailure(call: Call<RequirementMetaResponse>, t: Throwable) {
+
+
+
+                    _isFailed.value = t.message
+                }
+            })
+        } catch (t: Throwable) {
+
+            when (t) {
+                is IOException -> {
+                    _isFailed.value = "IO Exception"
+                }
+                else -> {
+                    _isFailed.value = "Exception." + t.message
+
+                    Log.i("RETROFIT", t.message!!)
+                }
+
+
+            }
+
+        }
+
+
+
+    }
 
 
     fun signupUser(firstName:String,lastName:String,email:String,contactNo:String)= viewModelScope.launch {

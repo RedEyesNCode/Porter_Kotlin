@@ -3,7 +3,10 @@ package com.ushatech.porter.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.ushatech.porter.R
+import com.ushatech.porter.data.RequirementMetaResponse
 import com.ushatech.porter.databinding.ActivityUserDetailsBinding
 import com.ushatech.porter.presentation.BaseActivity
 import com.ushatech.porter.presentation.SignupViewModel
@@ -25,6 +28,20 @@ class UserDetailsActivity : BaseActivity() {
         setupViewModel()
         attachObservers()
         getUserNumber()
+        viewModel.getAppRequirements()
+
+    }
+
+    private fun setupDropDownAdapter(data: ArrayList<RequirementMetaResponse.Data>) {
+        val arrayList :ArrayList<String> = arrayListOf()
+        for (item in data){
+            arrayList.add(item.requirement.toString())
+
+        }
+        val arrayAdapter = ArrayAdapter(this, R.layout.drop_down_item, arrayList.toTypedArray())
+        binding.menuAppRequirement.setAdapter(arrayAdapter)
+
+
 
     }
 
@@ -56,6 +73,13 @@ class UserDetailsActivity : BaseActivity() {
                    showToast(it.message.toString())
                }
             }
+        }
+        viewModel.requirementMetaResponse.observe((this)){
+            hideLoader()
+            setupDropDownAdapter(it.data)
+
+
+
         }
     }
 

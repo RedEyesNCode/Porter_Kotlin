@@ -8,4 +8,7 @@ class MainRepository {
 
     suspend fun loginUser(mobileNumber: String,otp:String) = AndroidClient().apiInterface.loginUser(mobileNumber, otp)
 
+
+    suspend fun getRequirementUiMeta() = AndroidClient().apiInterface.getRequirementMeta()
+
 }

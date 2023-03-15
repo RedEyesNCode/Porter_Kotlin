@@ -33,7 +33,6 @@ interface ApiService {
     @POST("login.php")
     fun loginUser(@Field("mobile") mobileNumber: String,@Field("otp") otp:String):Call<LoginUserResponse>
 
-    @FormUrlEncoded
     @POST("requirements.php")
     fun getRequirementMeta():Call<RequirementMetaResponse>
 
