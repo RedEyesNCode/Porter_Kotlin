@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ushatech.porter.presentation.LoginViewModel" />
+    </data>
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -111,12 +117,22 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:id="@+id/btnLogin"
-            android:text="Login"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:layout_marginTop="@dimen/_18sdp"
             android:textColor="@color/white"
             android:background="@drawable/background_rounded_blue"
             android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/btnSingup"
+            android:text="@string/create_new_account"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/background_rounded_blue"
+            android:layout_height="wrap_content"/>
+
 
 
 
@@ -136,3 +152,4 @@
 
 
 </RelativeLayout>
+</layout>

@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ushatech.porter.data.CommonResponse
+import com.ushatech.porter.data.RegistrationResponse
 import com.ushatech.porter.domain.MainRepository
 import com.ushatech.porter.utils.Constant
 import kotlinx.coroutines.launch
@@ -20,38 +20,50 @@ class SignupViewModel(): ViewModel() {
     private val _isLoading = MutableLiveData<Boolean>()
     val isSuccess: LiveData<Boolean> = _isLoading
 
-    private val _commonResponse = MutableLiveData<CommonResponse>()
-    val commonResponse:LiveData<CommonResponse> = _commonResponse
+    private val _commonResponse = MutableLiveData<RegistrationResponse>()
+    val registerUserResponse:LiveData<RegistrationResponse> = _commonResponse
     val mainRepo = MainRepository()
 
 
 
-    fun signupUser(map:HashMap<String,String>)= viewModelScope.launch {
+    fun signupUser(firstName:String,lastName:String,email:String,contactNo:String)= viewModelScope.launch {
 
-        signupUserCoroutine(map)
+        signupUserCoroutine(firstName, lastName, email, contactNo)
 
 
     }
-    private suspend fun signupUserCoroutine(map: HashMap<String, String>) {
+    private suspend fun signupUserCoroutine(firstName:String,lastName:String,email:String,contactNo:String) {
         try {
 
-            val response = mainRepo.signupUser(map)
+            val response = mainRepo.signupUser(firstName, lastName, email, contactNo)
             _isLoading.value = true
-            response.enqueue(object : Callback<CommonResponse> {
+            response.enqueue(object : Callback<RegistrationResponse> {
 
                 override fun onResponse(
-                    call: Call<CommonResponse>,
-                    response: Response<CommonResponse>
+                    call: Call<RegistrationResponse>,
+                    response: Response<RegistrationResponse>
                 ) {
                     _isLoading.value = false
                     if (response.code() == 200) {
-                        _commonResponse.postValue(response.body())
+                        if(response.body()?.status==0){
+                            _commonResponse.postValue(response.body())
+
+                        }else{
+
+                            _isFailed.value = "User Already exists please Login !"
+
+
+                        }
+
                     } else {
                         _isFailed.value = "${Constant.OOPS_SW} ${response.code()}"
                     }
                 }
 
-                override fun onFailure(call: Call<CommonResponse>, t: Throwable) {
+                override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
+
+
+
                     _isFailed.value = t.message
                 }
             })

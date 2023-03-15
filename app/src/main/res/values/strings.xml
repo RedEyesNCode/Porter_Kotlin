@@ -58,5 +58,7 @@
     <string name="POLICY">https://appawheels.com/privacy-policy.html</string>
     <string name="requirement">Requirement</string>
     <string name="mobile_number">Mobile Number</string>
+    <string name="login">Login</string>
+    <string name="create_new_account">Create new Account</string>
 
 </resources>
